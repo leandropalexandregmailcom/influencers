@@ -31,4 +31,5 @@ O projeto utiliza autenticação JWT (JSON Web Token) para garantir que apenas u
 ![{1929B127-0780-4B97-9D19-4F53B4E1FE39}](https://github.com/user-attachments/assets/5e8000f8-493c-478b-8da1-063f1ea2c9f7)
 ![{7316D6A5-CC68-4BF1-AE8F-27DB92E5D3AE}](https://github.com/user-attachments/assets/77e39475-0b28-4d98-b610-8a83b62103dc)
 
+![{1F4620C9-91D3-425F-9A0D-FDEBACB4B581}](https://github.com/user-attachments/assets/6bfa23ee-b922-4235-9ae5-f705ff6949a2)
 
