@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: app
+    working_dir: /var/www/html
+    volumes:
+      - .:/var/www/html
+    networks:
+      - app
+    depends_on:
+      - mysqlapp
+    command: ["sh", "-c", "php artisan migrate --force && php-fpm"]  # Rodar as migrações antes de iniciar o PHP-FPM
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    restart: unless-stopped
+    ports:
+      - "8002:80"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/nginx.conf
+      - .:/var/www/html
+    depends_on:
+      - app
+    networks:
+      - app
+
+  mysqlapp:
+    container_name: mysqlapp
+    image: mysql:5.7
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ""
+      MYSQL_DATABASE: influencers
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    volumes:
+      - ./mysql-data:/var/lib/mysql
+    ports:
+      - 3306:3306
+    networks:
+      - app
+
+networks:
+  app:
+    driver: bridge
