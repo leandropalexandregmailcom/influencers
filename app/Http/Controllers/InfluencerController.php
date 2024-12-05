@@ -109,6 +109,7 @@ class InfluencerController extends Controller
      *     path="/api/influencers/{id}",
      *     summary="Get a specific influencer",
      *     tags={"Influencers"},
+     *     security={{"bearerAuth": {}}},
      *     @OA\Parameter(
      *         name="id",
      *         in="path",

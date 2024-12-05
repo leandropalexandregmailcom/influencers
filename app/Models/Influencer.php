@@ -11,7 +11,7 @@ class Influencer extends Model
     use HasFactory;
     use SoftDeletes;
 
-    protected $fillable = ['name', 'instagram_handle', 'followers_count', 'category_id'];
+    protected $fillable = ['id','name', 'instagram_handle', 'followers_count', 'category_id'];
 
     public function campaigns()
     {
