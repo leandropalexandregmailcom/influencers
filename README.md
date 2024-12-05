@@ -28,3 +28,7 @@ Nginx
 MySQL 5.7
 
 O projeto utiliza autenticação JWT (JSON Web Token) para garantir que apenas usuários autenticados possam acessar os endpoints da API. Após o login, um token JWT é gerado e deve ser incluído nas requisições subsequentes para autenticação.# influencers
+![{1929B127-0780-4B97-9D19-4F53B4E1FE39}](https://github.com/user-attachments/assets/5e8000f8-493c-478b-8da1-063f1ea2c9f7)
+![{7316D6A5-CC68-4BF1-AE8F-27DB92E5D3AE}](https://github.com/user-attachments/assets/77e39475-0b28-4d98-b610-8a83b62103dc)
+
+
